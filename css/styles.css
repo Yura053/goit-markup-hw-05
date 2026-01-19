@@ -180,9 +180,9 @@ Hero section
    padding: 188px 0;
    background-color: #2e2f42;
    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
-   width: 1440px;
+   max-width: 1440px;
    height: 600px;
-   margin: auto;
+   margin:0 auto;
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -370,14 +370,14 @@ Team section
 }
 
 
-.portfolio-list {
+/* .portfolio-list {
    display: flex;
    flex-wrap: wrap;
    gap: 48px 24px;
-}
+} */
 
 .portfolio-card {
-   width: 360px;
+   /* width: 360px; */
    background-color: #ffffff;
    border: none;
 }
@@ -555,7 +555,9 @@ Footer
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
    color: #ffffff;
-   transition: border 0.3s ease, box-shadow 0.3s ease;
+   transition:
+         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -579,8 +581,8 @@ Footer
    border: none;
    border-radius: 4px;
    /*padding: 8px 24px;*/
-   transition: background-color 0.3s ease;
-   margin: 0 auto
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   margin: 0 auto;
 }
 
 
@@ -604,8 +606,8 @@ Footer
 /* Поле вводу змінює бордер на зелений при фокусі */
 .order-form-input:focus {
    border: 1px solid #31d0aa;
-   /* зелений бордер */
    
+   outline: none;
    /* прибирає стандартний синій ободок */
    box-shadow: 0 0 5px rgba(49, 208, 170, 0.5);
   
@@ -835,6 +837,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .label-checkbox-a {
    text-decoration: underline;
+   color: #4d5ae5;
 }
 
 .modal-form-button {
